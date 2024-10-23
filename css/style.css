@@ -1,0 +1,50 @@
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0px;
+}
+
+header, main {
+    margin: 0px 32px;
+}
+
+:root {
+    --med-blue: #5097c6;
+    --light-blue: #bddff6;
+    --dark-blue: #2d6e9a;
+}
+
+nav {
+    background-color: var(--med-blue);
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: 1px solid black; /* Border between items */
+    padding: 15px 0; /* Vertical padding */
+}
+
+nav ul li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Text color */
+    display: block; /* Make the link take up the full width of the list item */
+    margin-left: 32px;
+}
+
+#skip{
+    position: absolute;
+    top: -500px;
+  }
+  
+#skip:focus {
+    position: absolute;
+    top: 10px;
+}

@@ -31,9 +31,12 @@ def csv_to_html(csv_filename, output_folder):
 <title>{link_text}</title>
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
    <body>
-   <a href = "#main">Skip to Main Content</a>
+   <a href = "#main" id="skip">Skip to Main Content</a>
    <nav>
      <ul>
         <li><a href="index.html">Home Page</a></li>
