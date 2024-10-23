@@ -17,7 +17,7 @@ def csv_to_html(csv_filename, output_folder):
 
         # Extract values from the first five rows
         link_text = rows[0][0]
-        h2_text = rows[1][0]
+        date = rows[1][0]
         link_url = rows[2][0]
         summary_text = rows[3][0]
 
@@ -49,8 +49,9 @@ def csv_to_html(csv_filename, output_folder):
    <header>
       <!--Meet Info-->
        
-        <h1><a href="{link_url}">{link_text}</a></h1>
-        <h2>{h2_text}</h2>
+        <h1><a href="{link_url}">{link_text}</a></h1><br>
+        <p>{date}</p>
+        <br><hr>
 </header>
    <main id = "main">
 
@@ -88,7 +89,7 @@ def csv_to_html(csv_filename, output_folder):
                     <section id="individual-results">\n
                     <h2>Individual Results</h2>"""
 
-                place = row[0]
+                place = row[0].strip(".")
                 grade = row[1]
                 name = row[2]
                 time = row[4]
@@ -97,15 +98,13 @@ def csv_to_html(csv_filename, output_folder):
                 # Add the athlete div
                 html_content += f"""
 <div class="athlete">
-<figure> 
-    <img src="../images/profiles/{profile_pic}" width="200" alt="Profile picture of {name}"> 
-    <figcaption>{name}</figcaption>
-</figure>
-<dl>
-    <dt>Place</dt><dd>{place}</dd>
-    <dt>Time</dt><dd>{time}</dd>
-    <dt>Grade</dt><dd>{grade}</dd>
-</dl>
+<img src="../images/profiles/{profile_pic}" width="200" alt="Profile picture of {name}"> 
+<div>
+    <h3>{name}</h3>
+    <h4>Place</h4><p>{place}</p>
+    <h4>Time</h4><p>{time}</p>
+    <h4>Grade</h4><p>{grade}</p>
+</div>
 </div>
 """
 

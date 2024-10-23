@@ -4,7 +4,25 @@
 }
 
 header, main {
-    margin: 0px 32px;
+    margin: 30px 32px;
+}
+
+body {
+    font-size: 20px;
+}
+
+h1 a {
+    text-decoration: none;
+    font-size: 32px;
+    color: var(--dark-blue);
+}
+
+h2 {
+    margin: 20px 0px;
+}
+
+section {
+    margin: 30px 0px;
 }
 
 :root {
@@ -28,13 +46,18 @@ nav ul li {
     padding: 15px 0; /* Vertical padding */
 }
 
+nav ul li:hover {
+    background-color: var(--dark-blue);
+    font-weight: 700;
+}
+
 nav ul li:last-child {
     border-bottom: none; /* Remove border from the last item */
 }
 
 nav ul li a {
     text-decoration: none; /* Remove underline from links */
-    color: #333; /* Text color */
+    color: black; /* Text color */
     display: block; /* Make the link take up the full width of the list item */
     margin-left: 32px;
 }
@@ -47,4 +70,73 @@ nav ul li a {
 #skip:focus {
     position: absolute;
     top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.athlete {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: left;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+  }
+
+
+/* .athlete img {
+    border-radius:
+} */
+
+.athlete figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.athlete h3 {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.athlete p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.athlete div {
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+.athlete div h3 {
+    color: var(--dark-blue);
 }
