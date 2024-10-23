@@ -146,7 +146,7 @@ def csv_to_html(csv_filename, output_folder):
 
 def process_meet_files():
     # Set the meets folder path
-    meets_folder = os.path.join(os.getcwd(), "meets")
+    meets_folder = os.path.join(os.getcwd(), "Deliverable-3/meets")
     
     # Search for all CSV files in the meets folder
     csv_files = [f for f in os.listdir(meets_folder) if f.endswith('.csv')]
@@ -231,7 +231,7 @@ print(html_gallery)
 
 if __name__ == "__main__":
     # Check if meets folder exists
-    meets_folder = os.path.join(os.getcwd(), "meets")
+    meets_folder = os.path.join(os.getcwd(), "Deliverable-3/meets")
     if not os.path.exists(meets_folder):
         print(f"Folder '{meets_folder}' does not exist.")
     else:
