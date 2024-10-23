@@ -2,12 +2,12 @@
         General Styles
 ========================================== */
 
-/* --- Font and Margins --- */
+/* --- Default Font --- */
 * {
     font-family: "Inter", sans-serif;
 }
 
-/* --- Text Size --- */
+/* --- Default Text Size --- */
 body {
     font-size: 20px;
 }
@@ -19,62 +19,73 @@ body {
     --dark-blue: #2d6e9a;
 }
 
-/* ===========================================
-        Header & Main Layout
-=========================================== */
-
-/* --- Margins */
+/* --- Content Margins --- */
 header, main {
     margin: 30px 32px;
 }
 
+
 /* ===========================================
         Headings
 =========================================== */
+
+/* --- Heading 1 --- */
 h1 a {
     text-decoration: none;
     font-size: 32px;
     color: var(--dark-blue);
 }
 
+/* --- Heading 2 --- */
 h2 {
     margin: 20px 0px;
 }
 
+
 /* ===========================================
         Sections
 =========================================== */
+
+/* --- Section Top/Bottom Margins --- */
 section {
     margin: 30px 0px;
 }
 
+
 /* ===========================================
         Navigation Styles
 =========================================== */
+
+/* --- Nav Bar Color --- */
 nav {
     background-color: var(--med-blue);
 }
 
+/* --- Nav List --- */
 nav ul {
     list-style-type: none; 
     padding: 0;
     margin: 0;
 }
 
+/* --- Nav Item --- */
 nav ul li {
     border-bottom: 1px solid black; 
     padding: 15px 0; 
 }
 
+/* --- Nav Item on Hover --- */
 nav ul li:hover {
     background-color: var(--dark-blue);
     font-weight: 700;
 }
 
+/* --- Remove Border from Last Nav Item --- */
 nav ul li:last-child {
     border-bottom: none; 
 }
 
+/* --- Nav Item Text --- */
 nav ul li a {
     text-decoration: none; 
     color: black; 
@@ -82,50 +93,59 @@ nav ul li a {
     margin-left: 32px;
 }
 
+
 /* ===========================================
         Skip to Content
 =========================================== */
+
+/* --- Hide Skip Button --- */
 #skip {
     position: absolute;
     top: -500px;
 }
 
+/* --- Show Skip Button on Focus --- */
 #skip:focus {
     position: absolute;
     top: 10px;
 }
 
+
 /* ===========================================
-        Table Styles
+        Team Results Table Styles
 =========================================== */
-table {
+
+/* --- Overall Table --- */
+#team-results table {
     width: 100%;
     border-collapse: collapse;
     font-family: 'Inter', sans-serif;
 }
 
-th, td {
+/* --- Heading and Data Cells --- */
+#team-results th, td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-th {
+/* --- Heading Cells --- */
+#team-results th {
     background-color: var(--dark-blue);
     color: white;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:hover {
+/* --- Row Color on Hover --- */
+#team-results tr:hover {
     background-color: #ddd;
 }
+
 
 /* ===========================================
         Athlete Result Card
 =========================================== */
+
+/* --- Overall Card --- */
 .athlete-result {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -137,32 +157,31 @@ tr:hover {
     margin-bottom: 20px;
 }
 
-.athlete-result figcaption {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
+/* --- Athlete Name --- */
 .athlete-result h3 {
     margin: 5px 0;
     font-size: 1em;
-    color: #333;
+    color: var(--dark-blue);
 }
 
+/* --- Label (Place, Time, Grade) --- */
+.athlete-result h4 {
+    font-size: 22px;
+}
+
+/* --- Data --- */
 .athlete-result p {
     margin: 5px 0;
     color: #555;
     font-size: 0.9em;
 }
 
+/* --- Name & Data --- */
 .athlete-result div {
     justify-content: space-around;
     margin-left: 20px;
 }
 
-.athlete-result div h3 {
-    color: var(--dark-blue);
-}
 
 /* ===========================================
         Footer Styles
