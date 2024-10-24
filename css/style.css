@@ -36,6 +36,10 @@ h1, h1 a {
     color: var(--dark-blue);
 }
 
+h1 a:hover {
+    text-decoration: underline;
+}
+
 /* --- Heading 2 --- */
 h2 {
     font-size: 1.4rem;
@@ -220,7 +224,6 @@ footer a:hover {
 }
 
 
-
 /* ===========================================
         All Meets Table 
 =========================================== */
@@ -246,4 +249,14 @@ footer a:hover {
 /* --- Row Color on Hover --- */
 #all-meets tr:hover {
     background-color: #ddd;
+}
+
+#all-meets a {
+    text-decoration: none;
+    color: black;
+}
+
+#all-meets a:hover {
+    text-decoration: underline;
+    color: var(--dark-blue);
 }

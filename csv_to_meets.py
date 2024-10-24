@@ -40,7 +40,7 @@ def csv_to_html(csv_filename, output_folder):
    <nav>
      <ul>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="#meet-results">Meet Results</a></li>
+        <li><a href="../meets.html">Meet Results</a></li>
         <li><a href="#athletes">Athletes</a></li>
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -49,7 +49,7 @@ def csv_to_html(csv_filename, output_folder):
    <header>
       <!--Meet Info-->
        
-        <h1><a href="{link_url}">{link_text}</a></h1><br>
+        <h1><a href="{link_url}" target="_blank">{link_text}</a></h1><br>
         <p>{date}</p>
         <br><hr>
 </header>
