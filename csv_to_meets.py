@@ -40,8 +40,9 @@ def csv_to_html(csv_filename, output_folder):
    <nav>
      <ul>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="#team-results">Team Results</a></li>
-        <li><a href="#individual-results">Individual Results</a></li>
+        <li><a href="#meet-results">Meet Results</a></li>
+        <li><a href="#athletes">Athletes</a></li>
+        <li><a href="#schedule">Schedule</a></li>
         <li><a href="#gallery">Gallery</a></li>
      </ul>
    </nav>
