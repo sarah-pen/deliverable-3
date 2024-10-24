@@ -138,7 +138,7 @@ def csv_to_html(csv_filename, output_folder):
         html_content = re.sub(r'</time>', '</span>', html_content)
 
         # Save HTML content to a file in the meets folder
-        with open(html_filename, 'w', encoding='utf-8') as htmlfile:
+        with open(html_filename.replace("#",""), 'w', encoding='utf-8') as htmlfile:
             htmlfile.write(html_content)
 
         print(f"HTML file '{html_filename}' created successfully.")

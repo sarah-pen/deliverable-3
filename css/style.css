@@ -30,7 +30,7 @@ header, main {
 =========================================== */
 
 /* --- Heading 1 --- */
-h1 a {
+h1, h1 a {
     text-decoration: none;
     font-size: 1.6rem;
     color: var(--dark-blue);
@@ -131,7 +131,6 @@ nav ul li a {
 #team-results table {
     width: 100%;
     border-collapse: collapse;
-    font-family: 'Inter', sans-serif;
 }
 
 /* --- Heading and Data Cells --- */
@@ -220,3 +219,31 @@ footer a:hover {
     color: #dff0d8;
 }
 
+
+
+/* ===========================================
+        All Meets Table 
+=========================================== */
+
+#all-meets {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* --- Heading and Data Cells --- */
+#all-meets th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- Heading Cells --- */
+#all-meets th {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+/* --- Row Color on Hover --- */
+#all-meets tr:hover {
+    background-color: #ddd;
+}

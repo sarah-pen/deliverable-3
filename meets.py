@@ -12,16 +12,44 @@ html_template = '''
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet Results</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<h2>Meet Results</h2>
-<table>
+<a href="#main" id="skip">Skip to Main Content</a>
+
+<!-- <div class="logo-section">
+    <a href="index.html">
+        <img src="images/logo.png" alt="Event Logo" class="logo">
+    </a>
+    <h1>Ann Arbor Skyline High School Cross Country</h1>
+</div> -->
+
+<nav>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="meets.html">Meet Results</a></li>
+    <li><a href="#athletes">Athletes</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    </ul>
+</nav>
+
+<header>
+<h1>Meet Results</h1>
+</header>
+
+<main>
+<table id="all-meets">
     <thead>
         <tr>
             <th>Meet Title</th>
             <th>Date</th>
-            <th>Location</th>
             <th>Summary</th>
             <th>Link</th>
         </tr>
@@ -30,6 +58,7 @@ html_template = '''
         {table_rows}
     </tbody>
 </table>
+</main>
 
 </body>
 </html>
@@ -59,7 +88,7 @@ for filename in os.listdir(csv_directory):
             summary = rows[3][0]
 
             # Generate a file name for the link (assuming meet page exists for each CSV)
-            link = filename.replace('.csv', '.html')
+            link = ("meets/" + filename.replace('.csv', '.html')).replace("#", "")
 
             # Create a row for the table
             table_rows += f'''
