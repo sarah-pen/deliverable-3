@@ -56,6 +56,18 @@ html_template = '''
 
 </main>
 
+<footer>
+    <p>
+    Skyline High School<br>
+    <address>
+    2552 North Maple Road<br>
+    Ann Arbor, MI 48103<br><br>
+    </address>
+    <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
+    Follow us on Instagram <a href = "https://www.instagram.com/a2skylinexc/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i>  </a> 
+
+
+    </footer>
 </body>
 </html>
 '''
