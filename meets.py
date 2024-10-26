@@ -30,7 +30,6 @@ html_template = '''
     <li><a href="meets.html">Meet Results</a></li>
     <li><a href="#athletes">Athletes</a></li>
     <li><a href="#schedule">Schedule</a></li>
-    <li><a href="#gallery">Gallery</a></li>
     </ul>
 </nav>
 
