@@ -1,5 +1,6 @@
 import os
 import csv
+import re
 
 # Directory where CSV files are stored
 csv_directory = 'Deliverable-3/meets'
@@ -50,6 +51,8 @@ html_template = '''
         {table_rows}
     </tbody>
 </table>
+
+
 </main>
 
 </body>
@@ -82,6 +85,7 @@ for filename in os.listdir(csv_directory):
 
             # Extract relevant fields from the CSV
             meet_title = rows[0][0]
+            
             date = rows[1][0]
             
             for row in rows:

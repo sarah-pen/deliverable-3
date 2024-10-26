@@ -184,13 +184,15 @@ def extract_meet_id(url):
 def select_random_photos(folder_path, num_photos=25):
     # List all files in the folder
     print(f"Checking {folder_path}")
-    all_files = os.listdir(folder_path)
+    print(os.getcwd())
+    all_files = os.listdir("Deliverable-3/" + folder_path)
+
     # Filter out non-image files if necessary (assuming .jpg, .png, etc.)
     image_files = [f for f in all_files if f.endswith(('.png', '.jpg', '.jpeg', '.gif'))]
     
     # Ensure we have enough images to select
     if len(image_files) < num_photos:
-        return ""
+        # return ""
         raise ValueError(f"Not enough images in the folder. Found {len(image_files)} images.")
     
     # Select 12 random images
@@ -202,19 +204,19 @@ def generate_image_tags(image_files, folder_path):
     for img in image_files:
         img_path = os.path.join(folder_path, img)
         # print(f"The image_path is {img_path}")
-        img_tags.append(f'<img src=../{img_path} width = "200" alt="">')
+        img_tags.append(f'<img src="../{img_path}" width = "200" alt="">')
     return "\n".join(img_tags)
 
 # Putting it all together
 def create_meet_image_gallery(url):
     meet_id = extract_meet_id(url)
     # Define the folder path for images based on the meet ID
-    folder_path = f'images/meets/{meet_id}/'
+    folder_path = f'images/meets/{meet_id}'
 
-    # print(f"The folder path is {folder_path}")
+    print(f"The folder path is {folder_path}")
     
-    if not os.path.exists(folder_path):
-        return ""
+    if not os.path.join(os.getcwd(), f'Deliverable-3/images/meets/{meet_id}'):
+        # return ""
         raise FileNotFoundError(f"The folder {folder_path} does not exist.")
     
     # Select 12 random photos
