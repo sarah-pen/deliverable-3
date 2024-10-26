@@ -155,6 +155,10 @@ nav ul li a {
     background-color: #ddd;
 }
 
+#team-results tr:nth-child(2n), #all-meets tr:nth-child(2n) {
+    background-color: var(--light-blue);
+}
+
 
 /* ===========================================
         Athlete Result Card
@@ -165,7 +169,7 @@ nav ul li a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: left;
-    background-color: #f9f9f9;
+    background-color: var(--light-blue);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -235,7 +239,7 @@ footer a:hover {
 
 /* --- Heading and Data Cells --- */
 #all-meets th, td {
-    padding: 12px;
+    padding: 18px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -258,5 +262,63 @@ footer a:hover {
 
 #all-meets a:hover {
     text-decoration: underline;
-    color: var(--dark-blue);
+}
+
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.summary {
+    opacity: 0; /* Start hidden */
+    animation: slideInLeft 0.8s ease forwards;
+    animation-delay: 0.15s; /* Adjust to control when it appears */
+}
+
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+#gallery h2 {
+    grid-column: span 2;
+}
+
+#gallery img {
+    width: 40vw;
+    margin-bottom: 20px;
+}
+
+/* Initial state for gallery images (hidden) */
+#gallery img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Class to trigger the fade-in animation */
+#gallery img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Initial hidden state for rows */
+.fade-in-row {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state for rows */
+.fade-in-row.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
