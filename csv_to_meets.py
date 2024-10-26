@@ -115,7 +115,7 @@ def csv_to_html(csv_filename, output_folder):
         <h2>Gallery</h2>
         """
 
-        html_content += create_meet_image_gallery(url)
+        html_content += create_meet_image_gallery(link_url)
         # Close the HTML document
         html_content += """
    </section>
@@ -175,9 +175,10 @@ import random
 def extract_meet_id(url):
     # Regex to extract the meet ID, which is the number right after '/meet/'
     match = re.search(r"/meet/(\d+)", url)
-    print(f"The meet id is {match}")
+    print(url)
+    # print(f"The meet id is {match}")
     if match:
-        print(f"Returning {match.group(1)}")
+        # print(f"Returning {match.group(1)}")
         return match.group(1)
     else:
         raise ValueError("Meet ID not found in URL.")
@@ -185,8 +186,10 @@ def extract_meet_id(url):
 # Step 2: Select 12 random photos from the folder
 def select_random_photos(folder_path, num_photos=25):
     # List all files in the folder
-    print(f"Checking {folder_path}")
-    print(os.getcwd())
+    # print(f"Checking {folder_path}")
+    if not os.path.exists("Deliverable-3/" + folder_path):
+        return ""
+    
     all_files = os.listdir("Deliverable-3/" + folder_path)
 
     # Filter out non-image files if necessary (assuming .jpg, .png, etc.)
@@ -215,7 +218,7 @@ def create_meet_image_gallery(url):
     # Define the folder path for images based on the meet ID
     folder_path = f'images/meets/{meet_id}'
 
-    print(f"The folder path is {folder_path}")
+    # print(f"The folder path is {folder_path}")
     
     if not os.path.join(os.getcwd(), f'Deliverable-3/images/meets/{meet_id}'):
         # return ""
@@ -232,7 +235,6 @@ def create_meet_image_gallery(url):
 # Example usage
 url = "https://www.athletic.net/CrossCountry/meet/235827/results/943367"
 html_gallery = create_meet_image_gallery(url)
-print(html_gallery)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,46 @@
+import os
+import csv
+import re
+import random
 
+# Directory where CSV files are stored
+csv_directory = 'Deliverable-3/meets'
+
+# try:
+with open("Deliverable-3/meets/SEC-HS_Jamboree_#2_(Red)_Mens_5000_Meters_Reserve_Boys_24.csv", mode='r', newline='', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile)
+    rows = list(reader)
+
+    # Extract values from the first five rows
+    title = rows[0][0]
+    date = rows[1][0]
+    link_url = rows[2][0]
+    summary_text = rows[3][0]
+
+    # Step 1: Extract the meet ID from the URL
+    def extract_meet_id(url):
+        # Regex to extract the meet ID, which is the number right after '/meet/'
+        match = re.search(r"/meet/(\d+)", url)
+        print(f"The meet id is {match}")
+        if match:
+            print(f"Returning {match.group(1)}")
+            return match.group(1)
+        else:
+            raise ValueError("Meet ID not found in URL.")
+
+
+    def select_random_photo():
+        print(os.getcwd())
+        all_files = os.listdir(f"Deliverable-3/images/meets/{extract_meet_id(link_url)}")
+
+        # Filter out non-image files if necessary (assuming .jpg, .png, etc.)
+        image_files = [f for f in all_files if f.endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+
+        # Select 1 random image
+        return random.choice(image_files)
+
+    # HTML template for the table (without CSS)
+    html_template = f'''
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -33,10 +75,11 @@
         <p>We are a high school cross country team located in Ann Arbor, Michigan, and we compete in races all over the Midwest! This site provides past race data, athlete profiles, and a photo gallery for each meet.</p>
 
         <h2>Race Highlight</h2>
-        <h3>SEC-HS Jamboree #2 (Red) Mens 5000 Meters Reserve Boys</h3>
-        <p>Tue Sep 24 2024</p>
+        <h3>{title}</h3>
+        <p>{date}</p>
         <br>
-        <p><p>The Skyline boys JV cross country team hit the course at the SEC-HS Jamboree #2, racing hard and leaving nothing behind. While the varsity teams grabbed the headlines, the JV squad quietly showed they’re more than ready to make their own mark.</p> <p>Leading the way was sophomore <span class="athlete">Enshu Kuan</span>, who finished with a time of <time>18:29.50</time>. Hot on his heels, freshman <span class="athlete">Dylan Hanley</span> clocked in at <time>18:33.30</time>, with solid performances from <span class="athlete">Zeke Lafferty</span> (<time>18:20.60</time>), <span class="athlete">Hudson McCleskey</span> (<time>18:42.30</time>), and <span class="athlete">Cooper Ankeney</span> (<time>18:45.10</time>).</p></p>
+        <p>{summary_text}</p>
+        <img src="{select_random_photo()}">
 
 
     </main>
@@ -55,4 +98,17 @@
 
     </body>
     </html>
-    
+    '''
+
+
+
+# Define the path where you want to save the HTML file
+html_file_path = os.path.join("Deliverable-3", 'index.html')
+
+# Save the final HTML to a file
+with open(html_file_path, 'w') as f:
+    f.write(html_template)
+
+print("HTML file 'index.html' has been created!")
+
+
