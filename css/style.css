@@ -232,6 +232,7 @@ footer a:hover {
         All Meets Table 
 =========================================== */
 
+/* --- Overall Table --- */
 #all-meets {
     width: 100%;
     border-collapse: collapse;
@@ -255,6 +256,7 @@ footer a:hover {
     background-color: #ddd;
 }
 
+/* --- Links in All Meets Table --- */
 #all-meets a {
     text-decoration: none;
     color: black;
@@ -264,6 +266,10 @@ footer a:hover {
     text-decoration: underline;
 }
 
+
+/* ===========================================
+        Animation Keyframes
+=========================================== */
 
 @keyframes slideInLeft {
     from {
@@ -276,6 +282,7 @@ footer a:hover {
     }
 }
 
+/* --- Summary Section Animation --- */
 .summary {
     opacity: 0; /* Start hidden */
     animation: slideInLeft 0.8s ease forwards;
@@ -283,41 +290,52 @@ footer a:hover {
 }
 
 
+/* ===========================================
+        Gallery 
+=========================================== */
+
 #gallery {
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
 
+/* --- Gallery Heading --- */
 #gallery h2 {
     grid-column: span 2;
 }
 
+/* --- Gallery Images --- */
 #gallery img {
     width: 40vw;
     margin-bottom: 20px;
 }
 
-/* Initial state for gallery images (hidden) */
+/* --- Initial state for gallery images (hidden) --- */
 #gallery img {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Class to trigger the fade-in animation */
+/* --- Visible state for gallery images --- */
 #gallery img.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Initial hidden state for rows */
+
+/* ===========================================
+        Fade-In Animation for Table Rows
+=========================================== */
+
+/* --- Initial hidden state for rows --- */
 .fade-in-row {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Visible state for rows */
+/* --- Visible state for rows --- */
 .fade-in-row.visible {
     opacity: 1;
     transform: translateY(0);
