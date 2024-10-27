@@ -306,7 +306,7 @@
     /* --- Overall Table --- */
     #all-meets {
         width: 100%;
-        min-width: 400px; /* Set a min-width if necessary */
+        min-width: 420px; /* Set a min-width if necessary */
         border-collapse: collapse;
     }
 
