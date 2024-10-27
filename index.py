@@ -7,7 +7,7 @@ import random
 csv_directory = 'Deliverable-3/meets'
 
 # try:
-with open("Deliverable-3/meets/SEC-HS_Jamboree_#2_(Red)_Mens_5000_Meters_Reserve_Boys_24.csv", mode='r', newline='', encoding='utf-8') as csvfile:
+with open("Deliverable-3/meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode='r', newline='', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile)
     rows = list(reader)
 
@@ -30,14 +30,18 @@ with open("Deliverable-3/meets/SEC-HS_Jamboree_#2_(Red)_Mens_5000_Meters_Reserve
 
 
     def select_random_photo():
-        print(os.getcwd())
-        all_files = os.listdir(f"Deliverable-3/images/meets/{extract_meet_id(link_url)}")
+        meet_id = extract_meet_id(link_url)
+        path = f"Deliverable-3/images/meets/{meet_id}"
+        if not os.path.exists(path):
+            return ""
+        all_files = os.listdir(path)
 
         # Filter out non-image files if necessary (assuming .jpg, .png, etc.)
         image_files = [f for f in all_files if f.endswith(('.png', '.jpg', '.jpeg', '.gif'))]
 
         # Select 1 random image
-        return random.choice(image_files)
+        image_path = f"images/meets/{meet_id}/" + random.choice(image_files)
+        return image_path
 
     # HTML template for the table (without CSS)
     html_template = f'''
@@ -79,7 +83,7 @@ with open("Deliverable-3/meets/SEC-HS_Jamboree_#2_(Red)_Mens_5000_Meters_Reserve
         <p>{date}</p>
         <br>
         <p>{summary_text}</p>
-        <img src="{select_random_photo()}">
+        <img src="{select_random_photo()}" width="200">
 
 
     </main>
