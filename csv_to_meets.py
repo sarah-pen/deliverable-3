@@ -95,17 +95,17 @@ def csv_to_html(csv_filename, output_folder):
                 grade = row[1]
                 name = row[2]
                 time = row[4]
-                profile_pic = row[7]
 
                 # Add the athlete div
                 html_content += f"""
 <div class="athlete-result">
-<img src="../images/profiles/{profile_pic}" width="200" alt="Profile picture of {name}"> 
 <div>
     <h3>{name}</h3>
-    <h4>Place</h4><p>{place}</p>
-    <h4>Time</h4><p>{time}</p>
-    <h4>Grade</h4><p>{grade}</p>
+    <div id="athlete-data">
+        <div><h4>Place</h4><p>{place}</p></div>
+        <div><h4>Time</h4><p>{time}</p></div>
+        <div><h4>Grade</h4><p>{grade}</p></div>
+    </div>
 </div>
 </div>
 """

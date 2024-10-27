@@ -210,8 +210,6 @@
 
     /* --- Container --- */
     .athlete-result {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
         justify-items: left;
         background-color: var(--secondary);
         padding: 20px;
@@ -227,11 +225,15 @@
     }
 
     /* --- Text Section --- */
-    .athlete-result div {
+    /* .athlete-result div {
         justify-content: space-around;
-        margin-left: 20px;
-    }
+    } */
 
+    #athlete-data {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 75vw;
+    }
 
     /* ===========================================
             Footer 
