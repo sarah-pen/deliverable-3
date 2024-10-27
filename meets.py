@@ -24,6 +24,8 @@ html_template = '''
 
 <a href="#main" id="skip">Skip to Main Content</a>
 
+<div id="header-banner">
+</div>
 <nav>
     <ul>
     <li><a href="index.html">Home</a></li>

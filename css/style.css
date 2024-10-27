@@ -414,4 +414,10 @@
         transform: translateY(0);
     }
 
+    #header-banner {
+        background-image: url("../images/banner.jpg");
+        width: 100vw;
+        height: 300px;
+    }
+
 }
