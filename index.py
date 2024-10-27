@@ -7,7 +7,7 @@ import random
 csv_directory = 'Deliverable-3/meets'
 
 # try:
-with open("Deliverable-3/meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode='r', newline='', encoding='utf-8') as csvfile:
+with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode='r', newline='', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile)
     rows = list(reader)
 
@@ -31,7 +31,7 @@ with open("Deliverable-3/meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_
 
     def select_random_photo():
         meet_id = extract_meet_id(link_url)
-        path = f"Deliverable-3/images/meets/{meet_id}"
+        path = f"images/meets/{meet_id}"
         if not os.path.exists(path):
             return ""
         all_files = os.listdir(path)
@@ -77,12 +77,13 @@ with open("Deliverable-3/meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_
         <br>
 
         <p>We are a high school cross country team located in Ann Arbor, Michigan, and we compete in races all over the Midwest! This site provides past race data, athlete profiles, and a photo gallery for each meet.</p>
-
-        <h2>Race Highlight</h2>
-        <h3>{title}</h3>
-        <p>{date}</p>
+        <hr>
+            <h2>Race Highlight</h2>
+            <h3><a href="{link_url}">{title}</a></h3>
+            <p>{date}</p>
+            <br>
+            <p>{summary_text}</p>
         <br>
-        <p>{summary_text}</p>
         <img src="{select_random_photo()}" width="200">
 
 
@@ -107,10 +108,10 @@ with open("Deliverable-3/meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_
 
 
 # Define the path where you want to save the HTML file
-html_file_path = os.path.join("Deliverable-3", 'index.html')
+# html_file_path = os.path.join("Deliverable-3", 'index.html')
 
 # Save the final HTML to a file
-with open(html_file_path, 'w') as f:
+with open("index.html", 'w') as f:
     f.write(html_template)
 
 print("HTML file 'index.html' has been created!")

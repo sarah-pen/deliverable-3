@@ -30,4 +30,25 @@ document.addEventListener("DOMContentLoaded", function() {
         row.classList.add("fade-in-row");
         rowObserver.observe(row);
     });
+
+    // Fade-in effect for athlete results
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const fadeInOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+                observer.unobserve(entry.target); // Stop observing once element is in view
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(fadeInOnScroll, observerOptions);
+
+    document.querySelectorAll(".athlete-result").forEach(athlete => {
+        observer.observe(athlete);
+    });
 });
+

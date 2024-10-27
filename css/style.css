@@ -37,6 +37,11 @@
         transform: translateY(0); /* Reset position */
         transition: none; /* Remove transition */
     }
+
+    .athlete-result.fade-in {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Reset offset */
+    }
 }
 
 @media (min-width: 320px) {
@@ -79,7 +84,7 @@
         color: var(--tertiary);
     }
 
-    h1 a:hover {
+    h1 a:hover, h3 a:hover {
         text-decoration: underline;
     }
 
@@ -90,10 +95,11 @@
     }
 
     /* --- Heading 3 --- */
-    h3 {
+    h3, h3 a {
         font-size: 1.3rem;
         color: var(--tertiary);
         margin-bottom: 16px;
+        text-decoration: none;
     }
 
     /* --- Heading 4 --- */
@@ -234,6 +240,19 @@
         grid-template-columns: repeat(3, 1fr);
         width: 75vw;
     }
+
+    /* CSS for fade-in effect */
+    .athlete-result {
+        opacity: 0; /* Start as invisible */
+        transform: translateY(20px); /* Slight downward offset for effect */
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .athlete-result.fade-in {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Reset offset */
+    }
+
 
     /* ===========================================
             Footer 
