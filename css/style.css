@@ -8,10 +8,10 @@
 @media (prefers-color-scheme: dark) {
     /* Dark mode styles */
     :root {
-        --primary: #1b6393; /* Adjust for dark mode */
-        --secondary: #092756; /* Adjust for dark mode */
-        --tertiary: #5f99bf; /* Adjust for dark mode */
-        --background-color: #1f2937; /* Background color for dark mode */
+        --primary: #1b6393; 
+        --secondary: #092756; 
+        --tertiary: #5f99bf; 
+        --background-color: #1f2937; 
     }
 }
 
