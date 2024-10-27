@@ -3,7 +3,7 @@ import csv
 import re
 
 # Directory where CSV files are stored
-csv_directory = 'Deliverable-3/meets'
+csv_directory = 'meets'
 
 # HTML template for the table (without CSS)
 html_template = '''
@@ -38,6 +38,7 @@ html_template = '''
 </header>
 
 <main id="main">
+<div id="meets-container">
 <table id="all-meets">
     <thead>
         <tr>            
@@ -51,6 +52,7 @@ html_template = '''
         {table_rows}
     </tbody>
 </table>
+</div>
 
 
 </main>
@@ -122,10 +124,10 @@ for filename in os.listdir(csv_directory):
 final_html = html_template.format(table_rows=table_rows)
 
 # Define the path where you want to save the HTML file
-html_file_path = os.path.join("Deliverable-3", 'meets.html')
+# html_file_path = os.path.join("Deliverable-3", 'meets.html')
 
 # Save the final HTML to a file
-with open(html_file_path, 'w') as f:
+with open("meets.html", 'w') as f:
     f.write(final_html)
 
 print("HTML file 'meets.html' has been created!")

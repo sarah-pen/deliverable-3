@@ -297,9 +297,14 @@
             All Meets Table 
     =========================================== */
 
+    #meets-container {
+        overflow-x: auto;
+        width: 100%;
+    }
     /* --- Overall Table --- */
     #all-meets {
         width: 100%;
+        min-width: 300px; /* Set a min-width if necessary */
         border-collapse: collapse;
     }
 
