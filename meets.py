@@ -24,10 +24,10 @@ html_template = '''
 
 <a href="#main" id="skip">Skip to Main Content</a>
 
-<div id="header-banner">
+<header>
     <img src="images/banner.jpg" alt="running track close up">
     <div><h1>Skyline Cross Country Team</h1></div>
-</div>
+</header>
 <nav>
     <ul>
     <li><a href="index.html">Home</a></li>

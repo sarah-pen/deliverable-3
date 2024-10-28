@@ -61,10 +61,10 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
     </head>
     <body>
 
-    <div id="header-banner">
+    <header>
         <img src="images/banner.jpg" alt="running track close up">
         <div><h1>Skyline Cross Country Team</h1></div>
-    </div>
+    </header>
 
     <a href="#main" id="skip">Skip to Main Content</a>
     
