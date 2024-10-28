@@ -214,11 +214,6 @@
         color: white;
     }
 
-    /* --- Row Color on Hover --- */
-    #team-results tr:hover {
-        background-color: #ddd;
-    }
-
     /* --- Alternate Team Results Row Colors --- */
     #team-results tr:nth-child(2n), #all-meets tr:nth-child(2n) {
         background-color: var(--secondary);
@@ -293,11 +288,6 @@
     #all-meets th {
         background-color: var(--tertiary);
         color: white;
-    }
-
-    /* --- Row Color on Hover --- */
-    #all-meets tr:hover {
-        background-color: #ddd;
     }
 
     /* --- Links in All Meets Table --- */
