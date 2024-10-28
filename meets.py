@@ -25,6 +25,8 @@ html_template = '''
 <a href="#main" id="skip">Skip to Main Content</a>
 
 <div id="header-banner">
+    <img src="images/banner.jpg">
+    <div><h1>Skyline Cross Country Team</h1></div>
 </div>
 <nav>
     <ul>

@@ -61,6 +61,11 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
     </head>
     <body>
 
+    <div id="header-banner">
+        <img src="images/banner.jpg">
+        <div><h1>Skyline Cross Country Team</h1></div>
+    </div>
+
     <a href="#main" id="skip">Skip to Main Content</a>
     
     <nav>
@@ -78,6 +83,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
 
         <p>We are a high school cross country team located in Ann Arbor, Michigan, and we compete in races all over the Midwest! This site provides past race data, athlete profiles, and a photo gallery for each meet.</p>
         <hr>
+        <div id="highlight">
             <h2>Race Highlight</h2>
             <h3><a href="{link_url}">{title}</a></h3>
             <p>{date}</p>
@@ -85,6 +91,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
             <p>{summary_text}</p>
         <br>
         <img src="{select_random_photo()}" width="200">
+        </div>
 
 
     </main>

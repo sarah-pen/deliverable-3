@@ -39,6 +39,10 @@ def csv_to_html(csv_filename, output_folder):
 
 </head>
    <body>
+   <div id="header-banner">
+    <img src="../images/banner.jpg">
+    <div><h1>Skyline Cross Country Team</h1></div>
+    </div>
    <a href = "#main" id="skip">Skip to Main Content</a>
    <nav>
      <ul>
@@ -150,7 +154,7 @@ def csv_to_html(csv_filename, output_folder):
 
 def process_meet_files():
     # Set the meets folder path
-    meets_folder = os.path.join(os.getcwd(), "Deliverable-3/meets")
+    meets_folder = os.path.join(os.getcwd(), "meets")
     
     # Search for all CSV files in the meets folder
     csv_files = [f for f in os.listdir(meets_folder) if f.endswith('.csv')]
@@ -239,7 +243,7 @@ html_gallery = create_meet_image_gallery(url)
 
 if __name__ == "__main__":
     # Check if meets folder exists
-    meets_folder = os.path.join(os.getcwd(), "Deliverable-3/meets")
+    meets_folder = os.path.join(os.getcwd(), "meets")
     if not os.path.exists(meets_folder):
         print(f"Folder '{meets_folder}' does not exist.")
     else:
