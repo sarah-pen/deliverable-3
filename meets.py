@@ -32,13 +32,13 @@ html_template = '''
     <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="meets.html">Meet Results</a></li>
-    <li><a href="#athletes">Athletes</a></li>
-    <li><a href="#schedule">Schedule</a></li>
+    <li><a>Athletes</a></li>
+    <li><a>Schedule</a></li>
     </ul>
 </nav>
 
 <main id="main">
-<h1>Meet Results</h1>
+<h1>Meet Results</h1><br>
 <div id="meets-container">
 <table id="all-meets">
     <thead>

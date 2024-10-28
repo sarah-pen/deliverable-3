@@ -3,9 +3,6 @@ import csv
 import re
 import random
 
-# Directory where CSV files are stored
-csv_directory = 'Deliverable-3/meets'
-
 # try:
 with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode='r', newline='', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile)
@@ -72,8 +69,8 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="meets.html">Meet Results</a></li>
-            <li><a href="#athletes">Athletes</a></li>
-            <li><a href="#schedule">Schedule</a></li>
+            <li><a>Athletes</a></li>
+            <li><a>Schedule</a></li>
         </ul>
     </nav>
 
