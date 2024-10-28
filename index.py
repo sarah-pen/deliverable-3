@@ -62,7 +62,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
     <body>
 
     <div id="header-banner">
-        <img src="images/banner.jpg">
+        <img src="images/banner.jpg" alt="running track close up">
         <div><h1>Skyline Cross Country Team</h1></div>
     </div>
 
@@ -90,7 +90,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
             <br>
             <p>{summary_text}</p>
         <br>
-        <img src="{select_random_photo()}" width="200">
+        <img src="{select_random_photo()}" width="200" alt="Athlete running in {title}">
         </div>
 
 

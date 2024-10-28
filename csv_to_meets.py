@@ -36,13 +36,13 @@ def csv_to_html(csv_filename, output_folder):
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <script src="../animations.js"></script>
 
-
 </head>
+
    <body>
-   <div id="header-banner">
-    <img src="../images/banner.jpg">
+   <header>
+    <img src="../images/banner.jpg" alt="running track close up">
     <div><h1>Skyline Cross Country Team</h1></div>
-    </div>
+    </header>
    <a href = "#main" id="skip">Skip to Main Content</a>
    <nav>
      <ul>
@@ -52,14 +52,12 @@ def csv_to_html(csv_filename, output_folder):
         <li><a href="#schedule">Schedule</a></li>
      </ul>
    </nav>
-   <header>
-      <!--Meet Info-->
-       
-        <h1><a href="{link_url}" target="_blank">{link_text}</a></h1><br>
-        <p>{date}</p>
-        <br><hr>
-</header>
+
    <main id = "main">
+
+    <h1><a href="{link_url}" target="_blank">{link_text}</a></h1><br>
+            <p>{date}</p>
+            <br><hr>
 
 
     <section class="summary" id = "summary">
@@ -191,10 +189,10 @@ def extract_meet_id(url):
 def select_random_photos(folder_path, num_photos=25):
     # List all files in the folder
     # print(f"Checking {folder_path}")
-    if not os.path.exists("Deliverable-3/" + folder_path):
+    if not os.path.exists(folder_path):
         return ""
     
-    all_files = os.listdir("Deliverable-3/" + folder_path)
+    all_files = os.listdir(folder_path)
 
     # Filter out non-image files if necessary (assuming .jpg, .png, etc.)
     image_files = [f for f in all_files if f.endswith(('.png', '.jpg', '.jpeg', '.gif'))]
@@ -224,7 +222,7 @@ def create_meet_image_gallery(url):
 
     # print(f"The folder path is {folder_path}")
     
-    if not os.path.join(os.getcwd(), f'Deliverable-3/images/meets/{meet_id}'):
+    if not os.path.join(os.getcwd(), f'images/meets/{meet_id}'):
         # return ""
         raise FileNotFoundError(f"The folder {folder_path} does not exist.")
     

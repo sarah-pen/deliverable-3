@@ -70,7 +70,7 @@
     }
 
     /* --- Content Margins --- */
-    header, main {
+    main {
         margin: 30px 32px;
     }
 
@@ -416,13 +416,13 @@
         transform: translateY(0);
     }
 
-    #header-banner {
+    header {
         width: 100%;
         height: 100px;
         overflow: hidden;
     }
 
-    #header-banner img {
+    header img {
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -433,13 +433,13 @@
         width: 100%;
     }
 
-    #header-banner div {
+    header div {
         position: absolute;
         top: 40px;
         left: 24px;
     }
 
-    #header-banner h1 {
+    header h1 {
         color: var(--dark);
     }
 

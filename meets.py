@@ -25,7 +25,7 @@ html_template = '''
 <a href="#main" id="skip">Skip to Main Content</a>
 
 <div id="header-banner">
-    <img src="images/banner.jpg">
+    <img src="images/banner.jpg" alt="running track close up">
     <div><h1>Skyline Cross Country Team</h1></div>
 </div>
 <nav>
@@ -37,11 +37,8 @@ html_template = '''
     </ul>
 </nav>
 
-<header>
-<h1>Meet Results</h1>
-</header>
-
 <main id="main">
+<h1>Meet Results</h1>
 <div id="meets-container">
 <table id="all-meets">
     <thead>
