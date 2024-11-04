@@ -70,6 +70,7 @@ html_template = '''
 
 
     </footer>
+    <script src="js/imagePlaceholder.js"></script>
 </body>
 </html>
 '''
