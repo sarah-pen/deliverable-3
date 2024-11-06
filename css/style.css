@@ -11,11 +11,13 @@
     /* --- Default Font --- */
     * {
         font-family: "Inter", sans-serif;
+        color: var(--text);
     }
 
     /* --- Default Text Size --- */
     body {
         font-size: 1.1rem;
+        color: var(--text);
     }
 
     /* --- Color Palette --- */
@@ -23,7 +25,8 @@
         --primary: #5097c6;
         --secondary: #bddff6;
         --tertiary: #2d6e9a;
-        --dark: #0e3e5e;
+        --contrast: #0e3e5e;
+        --text: black;
     }
 
     /* --- Content Margins --- */
@@ -45,7 +48,7 @@
     h1, h1 a {
         text-decoration: none;
         font-size: 1.6rem;
-        color: black;
+        color: var(--text);
     }
 
     h1 a:hover, h3 a:hover {
@@ -56,7 +59,7 @@
     h2 {
         font-size: 1.4rem;
         margin: 20px 0px;
-        color: var(--dark);
+        color: var(--contrast);
     }
 
     /* --- Heading 3 --- */
@@ -70,7 +73,7 @@
     /* --- Heading 4 --- */
     h4 {
         font-size: 1.1rem;
-        color: var(--dark);
+        color: var(--contrast);
     }
 
 
@@ -94,11 +97,11 @@
     header div {
         position: absolute;
         top: 40px;
-        left: 24px;
+        left: 32px;
     }
 
     header h1 {
-        color: var(--dark);
+        color: var(--contrast);
     }
 
     /* ===========================================
@@ -126,6 +129,10 @@
     /* --- Nav Item on Hover --- */
     nav ul li:hover {
         background-color: var(--tertiary);
+    }
+
+    /* --- Nav Item on Hover --- */
+    nav ul li a:hover {
         font-weight: 700;
     }
 
@@ -137,7 +144,7 @@
     /* --- Nav Item Text --- */
     nav ul li a {
         text-decoration: none; 
-        color: black; 
+        color: var(--text);
         display: block; 
         margin-left: 32px;
     }
@@ -229,7 +236,7 @@
         justify-items: left;
         background-color: var(--secondary);
         padding: 20px;
-        border: solid 2px var(--dark);
+        border: solid 2px var(--contrast);
         border-radius: 10px;
         margin-bottom: 20px;
 
@@ -293,7 +300,7 @@
     /* --- Links in All Meets Table --- */
     #all-meets a {
         text-decoration: none;
-        color: black;
+        color: var(--text);
     }
 
     /* --- Links in All Meets Table on Hover --- */
@@ -381,16 +388,16 @@
     /* --- Container --- */
     footer {
         background-color: var(--tertiary);
-        color: white;
         text-align: center;
         padding: 40px;
         margin-top: 30px;
     }
 
     /* --- Text --- */
-    footer p {
+    footer p, address {
         margin: 0;
         padding-bottom: 10px;
+        color: white;
     }
 
     /* --- Address --- */
@@ -401,7 +408,7 @@
 
     /* --- Link --- */
     footer a {
-        color: #ffffff;
+        color: white;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s ease;
@@ -415,6 +422,73 @@
 
 
 /* =====================================================
+        Desktop Styling
+===================================================== */
+
+@media (min-width: 600px) {
+
+    /* --- Content Margins --- */
+    main {
+        margin: 30px 64px;
+    }
+
+    /* --- Section Top/Bottom Margins --- */
+    section {
+        margin: 30px 0px;
+    }
+
+    header div {
+        position: absolute;
+        top: 40px;
+        left: 64px;
+    }
+
+    /* --- Container --- */
+    nav {
+        background-color: var(--primary);
+    }
+
+    /* --- Nav List --- */
+    nav ul {
+        list-style-type: none; 
+        padding: 0px 0px 0px 64px;
+        margin: 0;
+    }
+
+    /* --- Nav Item --- */
+    nav ul li {
+        display: inline-block;
+        width: fit-content;
+        border-bottom: 1px solid black; 
+        padding: 20px 60px 20px 0px;
+    }
+
+    /* --- Nav Item on Hover --- */
+    nav ul li:hover {
+        background-color: transparent;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+        font-weight: 700;
+    }
+
+    /* --- Remove Border from Last Nav Item --- */
+    nav ul li:last-child {
+        border-bottom: none; 
+    }
+
+    /* --- Nav Item Text --- */
+    nav ul li a {
+        text-decoration: none; 
+        color: var(--text);
+        display: inline-block; 
+        margin-left: 0px;
+    }
+
+}
+
+/* =====================================================
         Dark Mode
 ===================================================== */
 
@@ -424,8 +498,16 @@
         --primary: #1b6393; 
         --secondary: #092756; 
         --tertiary: #5f99bf; 
-        --light: #c2def0;
+        --contrast: #c2def0;
+        --text: white;
         --background-color: #1f2937; 
+    }
+    p, a, address {
+        color: var(--contrast);
+    }
+
+    footer {
+        background-color: var(--tertiary);
     }
 }
 

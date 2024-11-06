@@ -101,7 +101,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
             Ann Arbor, MI 48103<br><br>
         </address>
             <a href = "https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home">XC Skyline Page</a><br>
-        Follow us on Instagram <a href = "https://www.instagram.com/a2skylinexc/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i>  </a> 
+        <a href = "https://www.instagram.com/a2skylinexc/" aria-label="Instagram">Follow us on Instagram<i class="fa-brands fa-instagram"></i></a> 
 
         </footer>
 
