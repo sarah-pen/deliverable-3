@@ -425,7 +425,7 @@
         Desktop Styling
 ===================================================== */
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
 
     /* --- Content Margins --- */
     main {
@@ -436,6 +436,7 @@
     section {
         margin: 30px 0px;
     }
+
 
     header div {
         position: absolute;
@@ -459,7 +460,7 @@
     nav ul li {
         display: inline-block;
         width: fit-content;
-        border-bottom: 1px solid black; 
+        border-bottom: none; 
         padding: 20px 60px 20px 0px;
     }
 
@@ -484,6 +485,58 @@
         color: var(--text);
         display: inline-block; 
         margin-left: 0px;
+    }
+
+    #highlight {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 60px 1fr;
+        column-gap: 20px;
+    }
+
+    #highlight-text {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #highlight img {
+        width: 200px;
+        grid-column: 1;
+    }
+
+    #individual-results {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    #individual-results h2 {
+        grid-column: span 2;
+    }
+
+    .athlete-result, .fade-in {
+        grid-column: span 1;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #athlete-data {
+        width: 100%;
+    }
+
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    #gallery h2 {
+        grid-column: span 3;
+    }
+
+    #gallery img {
+        width: 100%;
+        grid-column: span 1;
     }
 
 }

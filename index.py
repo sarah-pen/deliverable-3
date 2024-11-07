@@ -82,10 +82,12 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
         <hr>
         <div id="highlight">
             <h2>Race Highlight</h2>
+            <div id="highlight-text">
             <h3><a href="{link_url}">{title}</a></h3>
             <p>{date}</p>
             <br>
             <p>{summary_text}</p>
+            </div>
         <br>
         <img src="{select_random_photo()}" width="200" alt="Athlete running in {title}">
         </div>
