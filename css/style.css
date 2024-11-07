@@ -541,6 +541,22 @@
 
 }
 
+
+@media (min-width: 1100px) {
+
+    #individual-results {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #individual-results h2 {
+        grid-column: span 3;
+    }
+
+
+}
+
+
+
 /* =====================================================
         Dark Mode
 ===================================================== */
