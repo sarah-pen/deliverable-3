@@ -35,11 +35,11 @@ def csv_to_html(csv_filename, output_folder):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/lightbox.css">
-<script src="../js/animations.js"></script>
 
 </head>
 
    <body>
+    <button onclick="topFunction()" id="myBtn" title="Back to top">Back to Top</button>
    <header>
     <img src="../images/banner.jpg" alt="running track close up">
     <div><h1>Skyline Cross Country Team</h1></div>
@@ -137,6 +137,7 @@ def csv_to_html(csv_filename, output_folder):
                      </footer>
             <script src="../js/imagePlaceholder.js"></script>
             <script src="../js/lightbox.js"></script>
+            <script src="../js/animations.js"></script>
         </body>
 </html>
 """

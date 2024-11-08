@@ -54,10 +54,10 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/00d792a174.js" crossorigin="anonymous"></script>
-    <script src="js/animations.js"></script>
 
     </head>
     <body>
+    <button onclick="topFunction()" id="myBtn" title="Back to top">Back to Top</button>
 
     <header>
         <img src="images/banner.jpg" alt="running track close up">
@@ -78,6 +78,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
     <main id="main">
         <h1>Welcome to the Ann Arbor Skyline Cross Country Team!</h1>
         <br>
+
 
         <p>We are a high school cross country team located in Ann Arbor, Michigan, and we compete in races all over the Midwest! This site provides past race data, athlete profiles, and a photo gallery for each meet.</p>
         <hr>
@@ -108,6 +109,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
 
         </footer>
 
+        <script src="js/animations.js"></script>
     </body>
     </html>
     '''
