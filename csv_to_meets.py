@@ -215,7 +215,7 @@ def generate_image_tags(image_files, folder_path, meet_name):
     for img in image_files:
         img_path = os.path.join(folder_path, img)
         # print(f"The image_path is {img_path}")
-        img_tags.append(f'<a href="../{img_path}" data-lightbox="runner"><img src="../{img_path}" width = "200" alt="Runner racing in the {meet_name}"></a>')
+        img_tags.append(f'<a href="../{img_path}" data-lightbox="runner"><img src="../{img_path}" width = "200" alt="Athlete(s) racing in the {meet_name}"></a>')
     return "\n".join(img_tags)
 
 # Putting it all together
