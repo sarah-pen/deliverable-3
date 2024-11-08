@@ -57,7 +57,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
 
     </head>
     <body>
-    <button onclick="topFunction()" id="myBtn" title="Back to top">Back to Top</button>
+    <button onclick="topFunction()" id="button-to-top" title="Back to top">Back to Top</button>
 
     <header>
         <img src="images/banner.jpg" alt="running track close up">

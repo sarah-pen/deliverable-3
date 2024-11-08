@@ -22,7 +22,7 @@ html_template = '''
 <body>
 
 <a href="#main" id="skip">Skip to Main Content</a>
-<button onclick="topFunction()" id="myBtn" title="Back to top">Back to Top</button>
+<button onclick="topFunction()" id="button-to-top" title="Back to top">Back to Top</button>
 
 
 <header>

@@ -39,7 +39,7 @@ def csv_to_html(csv_filename, output_folder):
 </head>
 
    <body>
-    <button onclick="topFunction()" id="myBtn" title="Back to top">Back to Top</button>
+    <button onclick="topFunction()" id="button-to-top" title="Back to top">Back to Top</button>
    <header>
     <img src="../images/banner.jpg" alt="running track close up">
     <div><h1>Skyline Cross Country Team</h1></div>
@@ -80,7 +80,7 @@ def csv_to_html(csv_filename, output_folder):
             # For rows that are 3 columns wide, add to the team places list
             if len(row) == 3:
                 if row[0] == "Place":
-                    html_content += f"<tr><th>{row[0]}</th><th>{row[1]}</th><th>{row[2]}</th></tr>\n"
+                    html_content += f"<thead><th>{row[0]}</th><th>{row[1]}</th><th>{row[2]}</th></thead>\n"
 
                 else:
                     html_content += f"<tr><td>{row[0]}</td><td>{row[1]}</td><td> {row[2]}</td></tr>\n"
@@ -118,7 +118,7 @@ def csv_to_html(csv_filename, output_folder):
         <h2>Gallery</h2>
         """
 
-        html_content += create_meet_image_gallery(link_url)
+        html_content += create_meet_image_gallery(link_url, link_text)
         # Close the HTML document
         html_content += """
    </section>
@@ -210,16 +210,16 @@ def select_random_photos(folder_path, num_photos=25):
     return random.sample(image_files, num_photos)
 
 # Step 3: Generate HTML image tags
-def generate_image_tags(image_files, folder_path):
+def generate_image_tags(image_files, folder_path, meet_name):
     img_tags = []
     for img in image_files:
         img_path = os.path.join(folder_path, img)
         # print(f"The image_path is {img_path}")
-        img_tags.append(f'<a href="../{img_path}" data-lightbox="runner"><img src="../{img_path}" width = "200" alt=""></a>')
+        img_tags.append(f'<a href="../{img_path}" data-lightbox="runner"><img src="../{img_path}" width = "200" alt="Runner racing in the {meet_name}"></a>')
     return "\n".join(img_tags)
 
 # Putting it all together
-def create_meet_image_gallery(url):
+def create_meet_image_gallery(url, meet_name):
     meet_id = extract_meet_id(url)
     # Define the folder path for images based on the meet ID
     folder_path = f'images/meets/{meet_id}'
@@ -234,13 +234,13 @@ def create_meet_image_gallery(url):
     selected_photos = select_random_photos(folder_path)
     
     # Generate image tags
-    html_image_tags = generate_image_tags(selected_photos, folder_path)
+    html_image_tags = generate_image_tags(selected_photos, folder_path, meet_name)
     
     return html_image_tags
 
 # Example usage
-url = "https://www.athletic.net/CrossCountry/meet/235827/results/943367"
-html_gallery = create_meet_image_gallery(url)
+# url = "https://www.athletic.net/CrossCountry/meet/235827/results/943367"
+# html_gallery = create_meet_image_gallery(url)
 
 
 if __name__ == "__main__":

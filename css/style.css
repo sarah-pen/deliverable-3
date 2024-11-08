@@ -40,7 +40,7 @@
         margin: 30px 0px;
     }
 
-    #myBtn {
+    #button-to-top {
         display: none; /* Hidden by default */
         position: fixed; /* Fixed/sticky position */
         bottom: 20px; /* Place the button at the bottom of the page */
@@ -56,7 +56,7 @@
         font-size: 18px; /* Increase font size */
       }
       
-      #myBtn:hover {
+      #button-to-top:hover {
         background-color: var(--tertiary); /* Add a dark-grey background on hover */
       }
 
@@ -409,7 +409,7 @@
 
     /* --- Container --- */
     footer {
-        background-color: var(--tertiary);
+        background-color: var(--primary);
         text-align: center;
         padding: 40px;
         margin-top: 30px;
@@ -419,7 +419,7 @@
     footer p, address {
         margin: 0;
         padding-bottom: 10px;
-        color: white;
+        color: black;
     }
 
     /* --- Address --- */
@@ -430,7 +430,7 @@
 
     /* --- Link --- */
     footer a {
-        color: white;
+        color: black;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s ease;
@@ -597,6 +597,7 @@
 ===================================================== */
 
 @media (prefers-color-scheme: dark) {
+
     /* Dark mode styles */
     :root {
         --primary: #1b6393; 
@@ -606,13 +607,32 @@
         --text: white;
         --background-color: #1f2937; 
     }
-    p, a, address {
+
+    html {
+        background-color: #051021;
+    }
+    
+    p, a, address, h3 a, div h3 {
+        color: var(--text);
+    }
+
+    .athlete-result p {
         color: var(--contrast);
     }
 
-    footer {
-        background-color: var(--tertiary);
+    #team-results th {
+        color: var(--secondary);
     }
+
+    #button-to-top {
+        color: var(--secondary);
+    }
+
+    #all-meets th {
+        color: var(--secondary);
+    }
+
+
 }
 
 
