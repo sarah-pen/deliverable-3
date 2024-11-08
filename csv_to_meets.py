@@ -34,7 +34,8 @@ def csv_to_html(csv_filename, output_folder):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-<script src="../animations.js"></script>
+<link rel="stylesheet" href="../css/lightbox.css">
+<script src="../js/animations.js"></script>
 
 </head>
 
@@ -134,7 +135,8 @@ def csv_to_html(csv_filename, output_folder):
 
 
                      </footer>
-            <script src="js/imagePlaceholder.js"></script>
+            <script src="../js/imagePlaceholder.js"></script>
+            <script src="../js/lightbox.js"></script>
         </body>
 </html>
 """
@@ -212,7 +214,7 @@ def generate_image_tags(image_files, folder_path):
     for img in image_files:
         img_path = os.path.join(folder_path, img)
         # print(f"The image_path is {img_path}")
-        img_tags.append(f'<img src="../{img_path}" width = "200" alt="">')
+        img_tags.append(f'<a href="../{img_path}" data-lightbox="runner"><img src="../{img_path}" width = "200" alt=""></a>')
     return "\n".join(img_tags)
 
 # Putting it all together
