@@ -18,6 +18,7 @@
     body {
         font-size: 1.1rem;
         color: var(--text);
+        line-height: 1.5em;
     }
 
     /* --- Color Palette --- */
@@ -210,7 +211,7 @@
 
     /* --- Heading and Data Cells --- */
     #team-results th, td {
-        padding: 12px;
+        padding: 12px 15px;
         text-align: left;
         border-bottom: 1px solid #ddd;
     }
@@ -257,6 +258,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 75vw;
+        column-gap: 30px;
     }
 
     /* --- Animation End */
@@ -286,7 +288,7 @@
 
     /* --- Heading and Data Cells --- */
     #all-meets th, td {
-        padding: 18px;
+        padding: 12px 15px;
         text-align: left;
         border-bottom: 1px solid #ddd;
     }
@@ -500,7 +502,9 @@
     }
 
     #highlight img {
-        width: 200px;
+        min-width: 200px;
+        width: 100%;
+        max-width: 300px;
         grid-column: 1;
     }
 
@@ -539,6 +543,7 @@
         grid-column: span 1;
     }
 
+
 }
 
 
@@ -550,6 +555,16 @@
 
     #individual-results h2 {
         grid-column: span 3;
+    }
+
+    #meet-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 50px;
+    }
+
+    section {
+        margin: 10px 0px;
     }
 
 

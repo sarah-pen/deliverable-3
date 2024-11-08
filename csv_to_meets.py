@@ -59,7 +59,7 @@ def csv_to_html(csv_filename, output_folder):
             <p>{date}</p>
             <br><hr>
 
-
+    <div id="meet-grid">
     <section class="summary" id = "summary">
       <h2>Race Summary</h2>
       {summary_text}
@@ -89,7 +89,7 @@ def csv_to_html(csv_filename, output_folder):
                 if table_start == True:
                     table_start = False
                     html_content += "</table>\n"
-                    html_content += """</section>\n
+                    html_content += """</section></div>\n
                     <section id="individual-results">\n
                     <h2>Individual Results</h2>"""
 
