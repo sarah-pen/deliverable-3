@@ -698,8 +698,8 @@
 
     /* --- Summary Section Animation --- */
     .summary {
-        animation: none; /* Remove animation */
-        opacity: 1; /* Ensure it's visible */
+        animation: none; 
+        opacity: 1; 
     }
 
     #intro, #highlight {
@@ -709,20 +709,20 @@
 
     /* --- Gallery Images --- */
     #gallery img {
-        opacity: 1; /* Ensure they are visible */
-        transform: translateY(0); /* Reset position */
-        transition: none; /* Remove transition */
+        opacity: 1;
+        transform: translateY(0); 
+        transition: none; 
     }
 
     /* --- Fade-In Animation for Table Rows --- */
     .fade-in-row {
-        opacity: 1; /* Ensure they are visible */
-        transform: translateY(0); /* Reset position */
-        transition: none; /* Remove transition */
+        opacity: 1; 
+        transform: translateY(0); 
+        transition: none; 
     }
 
     .athlete-result.fade-in {
-        opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Reset offset */
+        opacity: 1; 
+        transform: translateY(0); 
     }
 }
