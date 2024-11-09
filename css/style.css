@@ -40,26 +40,6 @@
         margin: 30px 0px;
     }
 
-    #button-to-top {
-        display: none; /* Hidden by default */
-        position: fixed; /* Fixed/sticky position */
-        bottom: 20px; /* Place the button at the bottom of the page */
-        right: 30px; /* Place the button 30px from the right */
-        z-index: 99; /* Make sure it does not overlap */
-        border: none; /* Remove borders */
-        outline: none; /* Remove outline */
-        background-color: var(--contrast); /* Set a background color */
-        color: white; /* Text color */
-        cursor: pointer; /* Add a mouse pointer on hover */
-        padding: 15px; /* Some padding */
-        border-radius: 10px; /* Rounded corners */
-        font-size: 18px; /* Increase font size */
-      }
-      
-      #button-to-top:hover {
-        background-color: var(--tertiary); /* Add a dark-grey background on hover */
-      }
-
 
     /* ===========================================
             Headings
@@ -72,6 +52,7 @@
         color: var(--text);
     }
 
+    /* --- Heading Links on Hover --- */
     h1 a:hover, h3 a:hover {
         text-decoration: underline;
     }
@@ -102,12 +83,14 @@
             Header Banner
     =========================================== */
     
+    /* --- Container --- */
     header {
         width: 100%;
         height: 100px;
         overflow: hidden;
     }
 
+    /* --- Header Image --- */
     header img {
         height: 100%;
         width: 100%;
@@ -115,12 +98,14 @@
         opacity: 0.7;
     }
 
+    /* --- Header Text Container --- */
     header div {
         position: absolute;
         top: 40px;
         left: 32px;
     }
 
+    /* --- Header Text --- */
     header h1 {
         color: var(--contrast);
     }
@@ -186,12 +171,38 @@
         top: 10px;
     }
 
+    /* ===========================================
+            Back to Top
+    =========================================== */
+
+    /* --- Back to Top Button --- */
+    #button-to-top {
+        display: none; 
+        position: fixed; 
+        bottom: 20px; 
+        right: 30px; 
+        z-index: 99; 
+        border: none;
+        outline: none; 
+        background-color: var(--contrast); 
+        color: white; 
+        cursor: pointer; 
+        padding: 15px;
+        border-radius: 10px; 
+        font-size: 18px; 
+        }
+
+        /* --- Back to Top Button on Hover --- */
+        
+        #button-to-top:hover {
+        background-color: var(--tertiary); /* Add a dark-grey background on hover */
+        }
 
     /* ===========================================
             Homepage Race Highlight
     =========================================== */
 
-    /*  */
+    /* --- Container --- */
     #highlight {
         background-color: var(--secondary);
         border: solid 1px var(--tertiary);
@@ -273,7 +284,7 @@
         color: #555;
     }
 
-    /* --- Athlete Data Container */
+    /* --- Athlete Data Container --- */
     #athlete-data {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -281,7 +292,7 @@
         column-gap: 30px;
     }
 
-    /* --- Animation End */
+    /* --- Animation End --- */
     .athlete-result.fade-in {
         opacity: 1; /* Fully visible */
         transform: translateY(0); /* Reset offset */
@@ -444,7 +455,7 @@
 
 
 /* =====================================================
-        Desktop Styling
+        Tablet Styling
 ===================================================== */
 
 @media (min-width: 700px) {
@@ -459,14 +470,14 @@
         margin: 30px 0px;
     }
 
-
+    /* --- Header Text Container --- */
     header div {
         position: absolute;
         top: 40px;
         left: 64px;
     }
 
-    /* --- Container --- */
+    /* --- Nav Container --- */
     nav {
         background-color: var(--primary);
     }
@@ -491,6 +502,7 @@
         background-color: transparent;
     }
 
+    /* --- Nav Item Link on Hover */
     nav ul li a:hover {
         text-decoration: underline;
         font-weight: 700;
@@ -509,6 +521,7 @@
         margin-left: 0px;
     }
 
+    /* --- Race Highlight Container --- */
     #highlight {
         display: grid;
         grid-template-columns: 1fr 4fr;
@@ -516,11 +529,13 @@
         column-gap: 20px;
     }
 
+    /* --- Race Highlight Text --- */
     #highlight-text {
         grid-column: 2;
         grid-row: 2;
     }
 
+    /* --- Race Highlight Image --- */
     #highlight img {
         min-width: 200px;
         width: 100%;
@@ -528,36 +543,43 @@
         grid-column: 1;
     }
 
+    /* --- Athlete Results Section */
     #individual-results {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 20px;
     }
 
+    /* --- Athlete Results Title --- */
     #individual-results h2 {
         grid-column: span 2;
     }
 
+    /* --- Athlete Result Card --- */
     .athlete-result, .fade-in {
         grid-column: span 1;
         width: 100%;
         box-sizing: border-box;
     }
 
+    /* --- Athlete Result Text --- */
     #athlete-data {
         width: 100%;
     }
 
+    /* --- Gallery Section --- */
     #gallery {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 20px;
     }
 
+    /* --- Gallery Title --- */
     #gallery h2 {
         grid-column: span 3;
     }
 
+    /* --- Gallery Images */
     #gallery img {
         width: 100%;
         grid-column: span 1;
@@ -566,31 +588,35 @@
 
 }
 
+/* =====================================================
+        Desktop Styling
+===================================================== */
 
 @media (min-width: 1100px) {
 
+    /* --- General Section --- */
+    section {
+        margin: 10px 0px;
+    }
+
+    /* --- Individual Results Container --- */
     #individual-results {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    /* --- Individual Results Title --- */
     #individual-results h2 {
         grid-column: span 3;
     }
 
+    /* --- Meet Page Grid --- */
     #meet-grid {
         display: grid;
         grid-template-columns: 1fr 2fr;
         column-gap: 50px;
     }
 
-    section {
-        margin: 10px 0px;
-    }
-
-
 }
-
-
 
 /* =====================================================
         Dark Mode
@@ -598,7 +624,7 @@
 
 @media (prefers-color-scheme: dark) {
 
-    /* Dark mode styles */
+    /* Dark mode color palette */
     :root {
         --primary: #1b6393; 
         --secondary: #092756; 
@@ -608,30 +634,35 @@
         --background-color: #1f2937; 
     }
 
+    /* --- Page Background --- */
     html {
         background-color: #051021;
     }
     
-    p, a, address, h3 a, div h3 {
+    /* --- Text Color --- */
+    body {
         color: var(--text);
     }
 
+    /* --- Athlete Results Data Text --- */
     .athlete-result p {
         color: var(--contrast);
     }
 
+    /* --- Team Results Header Cell Text --- */
     #team-results th {
         color: var(--secondary);
     }
 
+    /* --- Back to Top Button --- */
     #button-to-top {
         color: var(--secondary);
     }
 
+    /* --- All Meets Header Cell Text --- */
     #all-meets th {
         color: var(--secondary);
     }
-
 
 }
 
@@ -641,7 +672,6 @@
 ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
-    /* Cancel animations for users who prefer reduced motion */
 
     /* --- Summary Section Animation --- */
     .summary {

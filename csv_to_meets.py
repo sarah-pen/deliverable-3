@@ -118,7 +118,7 @@ def csv_to_html(csv_filename, output_folder):
         <h2>Gallery</h2>
         """
 
-        html_content += create_meet_image_gallery(link_url, link_text)
+        html_content += create_meet_image_gallery(link_url)
         # Close the HTML document
         html_content += """
    </section>
@@ -135,7 +135,6 @@ def csv_to_html(csv_filename, output_folder):
 
 
                      </footer>
-            <script src="../js/imagePlaceholder.js"></script>
             <script src="../js/lightbox.js"></script>
             <script src="../js/animations.js"></script>
         </body>
@@ -210,16 +209,18 @@ def select_random_photos(folder_path, num_photos=25):
     return random.sample(image_files, num_photos)
 
 # Step 3: Generate HTML image tags
-def generate_image_tags(image_files, folder_path, meet_name):
+def generate_image_tags(image_files, folder_path):
     img_tags = []
+    indx = 1
     for img in image_files:
         img_path = os.path.join(folder_path, img)
         # print(f"The image_path is {img_path}")
-        img_tags.append(f'<a href="../{img_path}" data-lightbox="runner"><img src="../{img_path}" width = "200" alt="Athlete(s) racing in the {meet_name}"></a>')
+        img_tags.append(f'<a href="../{img_path}" data-lightbox="runner"><img src="../{img_path}" width = "200" alt="Image {indx} of athlete(s) running in the meet"></a>')
+        indx += 1
     return "\n".join(img_tags)
 
 # Putting it all together
-def create_meet_image_gallery(url, meet_name):
+def create_meet_image_gallery(url):
     meet_id = extract_meet_id(url)
     # Define the folder path for images based on the meet ID
     folder_path = f'images/meets/{meet_id}'
@@ -234,7 +235,7 @@ def create_meet_image_gallery(url, meet_name):
     selected_photos = select_random_photos(folder_path)
     
     # Generate image tags
-    html_image_tags = generate_image_tags(selected_photos, folder_path, meet_name)
+    html_image_tags = generate_image_tags(selected_photos, folder_path)
     
     return html_image_tags
 

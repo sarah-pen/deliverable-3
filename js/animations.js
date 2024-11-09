@@ -1,74 +1,83 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Fade-in effect for images
+
+    // Fade-in effect for gallery images
     const images = document.querySelectorAll("#gallery img");
 
+    // Observer for images to apply fade-in effect when in view
     const imageObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Optional: Stop observing after it fades in
+                entry.target.classList.add("visible");  
+                observer.unobserve(entry.target);       
             }
         });
     }, { threshold: 0.1 });
 
+    // Observe each image in the gallery
     images.forEach(image => {
         imageObserver.observe(image);
     });
 
-    // Fade-in effect for table rows
+    // Fade-in effect for table rows in #all-meets section
     const rows = document.querySelectorAll("#all-meets tbody tr");
 
+    // Observer for table rows to apply fade-in effect when in view
     const rowObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
+                entry.target.classList.add("visible");  
             }
         });
     }, { threshold: 0.1 });
 
+    // Add 'fade-in-row' class to each row and observe them
     rows.forEach(row => {
-        row.classList.add("fade-in-row");
+        row.classList.add("fade-in-row"); 
         rowObserver.observe(row);
     });
 
     // Fade-in effect for athlete results
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.1  
     };
 
+    // Callback function for athlete results observer
     const fadeInOnScroll = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in");
-                observer.unobserve(entry.target); // Stop observing once element is in view
+                entry.target.classList.add("fade-in");  
+                observer.unobserve(entry.target);      
             }
         });
     };
 
+    // Observer for athlete results
     const observer = new IntersectionObserver(fadeInOnScroll, observerOptions);
 
+    // Observe each element with the class 'athlete-result'
     document.querySelectorAll(".athlete-result").forEach(athlete => {
         observer.observe(athlete);
     });
 });
 
-// Get the button:
+// Scroll-to-top button functionality
+
+// Get the button element by ID
 let mybutton = document.getElementById("button-to-top");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+// Show the button when the user scrolls down 40px from the top of the document
+window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        mybutton.style.display = "block";  
+    } else {
+        mybutton.style.display = "none";  
+    }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// Scroll to the top of the document when the button is clicked
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0;        
+    document.documentElement.scrollTop = 0; 
 }
-
