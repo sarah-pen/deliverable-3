@@ -34,8 +34,6 @@ html_template = '''
     <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="meets.html">Meet Results</a></li>
-    <li><a>Athletes</a></li>
-    <li><a>Schedule</a></li>
     </ul>
 </nav>
 

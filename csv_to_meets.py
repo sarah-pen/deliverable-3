@@ -49,8 +49,6 @@ def csv_to_html(csv_filename, output_folder):
      <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../meets.html">Meet Results</a></li>
-        <li><a>Athletes</a></li>
-        <li><a>Schedule</a></li>
      </ul>
    </nav>
 
