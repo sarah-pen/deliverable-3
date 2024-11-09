@@ -472,7 +472,7 @@
 
     /* --- Link on Hover --- */
     footer a:hover {
-        color: #dff0d8;
+        color: var(--contrast);
     }
 }
 
