@@ -18,6 +18,7 @@ html_template = '''
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</script>
 </head>
 <body>
 
@@ -71,7 +72,6 @@ html_template = '''
 
 
     </footer>
-    <script src="js/imagePlaceholder.js"></script>
     <script src="js/animations.js"></script>
 
 </body>

@@ -80,7 +80,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
         <br>
 
 
-        <p>We are a high school cross country team located in Ann Arbor, Michigan, and we compete in races all over the Midwest! This site provides past race data, athlete profiles, and a photo gallery for each meet.</p>
+        <p id="intro">We are a high school cross country team located in Ann Arbor, Michigan, and we compete in races all over the Midwest! This site provides past race data, athlete profiles, and a photo gallery for each meet.</p>
         <hr>
         <div id="highlight">
             <h2>Race Highlight</h2>
