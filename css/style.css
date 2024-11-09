@@ -67,7 +67,7 @@
     /* --- Heading 3 --- */
     h3, h3 a {
         font-size: 1.3rem;
-        color: black;
+        color: var(--text);
         margin-bottom: 16px;
         text-decoration: none;
     }
@@ -474,6 +474,8 @@
     footer a:hover {
         color: var(--contrast);
     }
+
+
 }
 
 
@@ -685,6 +687,14 @@
     /* --- All Meets Header Cell Text --- */
     #all-meets th {
         color: var(--secondary);
+    }
+
+    footer {
+        background-color: var(--primary);
+    }
+
+    footer p, footer a, address {
+        color: var(--text);
     }
 
 }
