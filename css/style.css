@@ -86,7 +86,7 @@
     /* --- Container --- */
     header {
         width: 100%;
-        height: 100px;
+        height: 140px;
         overflow: hidden;
     }
 
@@ -101,7 +101,7 @@
     /* --- Header Text Container --- */
     header div {
         position: absolute;
-        top: 40px;
+        top: 60px;
         left: 32px;
     }
 

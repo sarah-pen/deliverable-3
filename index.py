@@ -3,15 +3,18 @@ import csv
 import re
 import random
 
+csv_file = "meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv"
+
 # try:
-with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode='r', newline='', encoding='utf-8') as csvfile:
+with open(csv_file, mode='r', newline='', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile)
     rows = list(reader)
 
     # Extract values from the first five rows
     title = rows[0][0]
     date = rows[1][0]
-    link_url = rows[2][0]
+    link_url = csv_file[0:-3] + "html"
+    athl_url = rows[2][0]
     summary_text = rows[3][0]
 
     # Step 1: Extract the meet ID from the URL
@@ -27,7 +30,7 @@ with open("meets/37th_Early_Bird_Open_Mens_5000_Meters_HS_Open_5K_24.csv", mode=
 
 
     def select_random_photo():
-        meet_id = extract_meet_id(link_url)
+        meet_id = extract_meet_id(athl_url)
         path = f"images/meets/{meet_id}"
         if not os.path.exists(path):
             return ""
