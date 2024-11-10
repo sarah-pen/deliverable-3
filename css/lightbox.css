@@ -204,9 +204,23 @@ body.lb-disable-scrolling {
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .lb-data .lb-container {
-      animation: none;
+    /* Disable all transitions and animations */
+    .lightboxOverlay,
+    .lb-nav a.lb-prev,
+    .lb-nav a.lb-next,
+    .lb-data .lb-close {
+      transition: none;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+    }
+
+    /* Set opacity directly instead of animating */
+    .lb-nav a.lb-prev,
+    .lb-nav a.lb-next,
+    .lb-data .lb-close {
       opacity: 1;
+      filter: none;
     }
   }
   
