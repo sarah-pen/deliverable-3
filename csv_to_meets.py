@@ -225,9 +225,10 @@ def create_meet_image_gallery(url):
 
     # print(f"The folder path is {folder_path}")
     
-    if not os.path.join(os.getcwd(), f'images/meets/{meet_id}'):
+    if not os.path.isdir(folder_path):
         # return ""
-        raise FileNotFoundError(f"The folder {folder_path} does not exist.")
+        # raise FileNotFoundError(f"The folder {folder_path} does not exist.")
+        return "<img src='../images/empty_folder.png' id='empty_img'>"
     
     # Select 12 random photos
     selected_photos = select_random_photos(folder_path)
