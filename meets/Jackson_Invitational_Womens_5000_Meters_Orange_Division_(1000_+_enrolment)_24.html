@@ -197,5 +197,37 @@
                      </footer>
             <script src="../js/lightbox.js"></script>
             <script src="../js/animations.js"></script>
+            <script>
+
+                lightbox.option({
+                    'alwaysShowNavOnTouchDevices': true
+                })
+
+                // Check if the user prefers reduced motion
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+                // Function to disable animations or adjust behavior
+                function handleReducedMotion() {
+                if (prefersReducedMotion.matches) {
+
+                    lightbox.option({
+                        'fadeDuration': 0,
+                        'imageFadeDuration': 0,
+                        'resizeDuration': 0
+                    })
+                } else {
+                    // Enable animations if reduced motion is not preferred
+                    document.body.classList.remove('reduce-motion');
+                    alwaysShowNavOnTouchDevices
+                }
+                }
+
+                // Initial check
+                handleReducedMotion();
+
+                // Listen for changes in the user's reduced motion preference
+                prefersReducedMotion.addEventListener('change', handleReducedMotion);
+            </script>
+
         </body>
 </html>
