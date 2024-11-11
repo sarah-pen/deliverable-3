@@ -502,7 +502,6 @@
     /* --- Header Text Container --- */
     header div {
         position: absolute;
-        top: 60px;
         left: 64px;
     }
 
