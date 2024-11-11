@@ -480,7 +480,6 @@
         color: var(--contrast);
     }
 
-
 }
 
 
@@ -620,7 +619,6 @@
         width: 70%;
     }
 
-
 }
 
 /* =====================================================
@@ -704,10 +702,12 @@
         color: var(--secondary);
     }
 
+    /* --- Footer Background --- */
     footer {
         background-color: var(--primary);
     }
 
+    /* --- Footer Text --- */
     footer p, footer a, address {
         color: var(--text);
     }
@@ -721,12 +721,13 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-    /* --- Summary Section Animation --- */
+    /* --- Disable Summary Section Animation --- */
     .summary {
         animation: none; 
         opacity: 1; 
     }
 
+    /* --- Disable Slide-in Animation --- */
     #intro, #highlight {
         animation: none;
         opacity: 1
@@ -746,6 +747,7 @@
         transition: none; 
     }
 
+    /* --- Athlete Results --- */
     .athlete-result.fade-in {
         opacity: 1; 
         transform: translateY(0); 
